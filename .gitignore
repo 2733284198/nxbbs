@@ -12,7 +12,6 @@
 .gitattributes
 composer.lock
 package.json
-webpack.mix.js
 yarn.lock
 package-lock.json
 .phpunit.result.cache
