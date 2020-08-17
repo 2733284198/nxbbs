@@ -27905,19 +27905,79 @@ body {
   font-size: 14px;
 }
 
-/* header */
-
-.navbar-static-top {
-  border-color: #e7e7e7;
-  background-color: #fff;
-  box-shadow: 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
-  border-top: 4px solid #00b5ad;
-  border-bottom: 1px solid #e8e8e8;
-  margin-bottom: 40px;
-  margin-top: 0px;
+.card {
+  border: none;
 }
 
-/* Sticky footer styles */
+.form-control {
+  border: none;
+  background-color: #f7f9fb !important;
+}
+
+.col-form-label {
+  text-align: right;
+  color: #515a6e;
+}
+
+/* 顶部 */
+
+.navbar-static-top {
+  background-color: #fff !important;
+  box-shadow: 0 1px 10px rgba(151, 164, 175, 0.1);
+  margin-bottom: 40px;
+  margin-top: 0px;
+  padding: 0.4rem 0;
+}
+
+.navbar-static-top .navbar-brand {
+  color: #2d8cf0;
+}
+
+.navbar-static-top .avatar {
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+}
+
+.navbar-static-top .userinfo {
+  height: 32px;
+  display: inline-block;
+  margin-left: 10px;
+  line-height: 32px;
+}
+
+.navbar-static-top .dropdown-menu {
+  min-width: 100px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  border: 0;
+  text-align: center;
+}
+
+.navbar-static-top .dropdown-item {
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-static-top .dropdown-item .btn {
+  border: none;
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar-static-top .dropdown-item:hover .btn {
+  background-color: #f8f9fa;
+}
+
+.navbar-static-top .dropdown-item:active {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.navbar-static-top .dropdown-item:active .btn {
+  background-color: #f8f9fa;
+}
+
+/* 底部样式 */
 
 html {
   position: relative;
@@ -27959,5 +28019,130 @@ body {
   border: 1px solid #ced4da;
   border-radius: 4px;
   padding: 3px;
+}
+
+/* 设置中心 */
+
+.left-bar {
+  width: 100%;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #e7eaf3;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, 0.2);
+  overflow: hidden;
+}
+
+.left-bar .user-bg {
+  width: calc(100% + 2rem);
+  height: 100px;
+  margin: -1rem;
+  background: #2d8cf0;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.left-bar .user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.left-bar .user-info .user-avatar {
+  border-radius: 5px;
+  border: 3px solid #fff;
+}
+
+.left-bar .user-info .user-avatar .avatar-img {
+  display: block;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+}
+
+.left-bar .user-info .user-name {
+  width: 100%;
+  height: 50px;
+  color: #5c7390;
+  position: relative;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.left-bar .user-info .user-name span {
+  line-height: 50px;
+  display: block;
+  text-align: left;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.left-bar .user-signature {
+  margin-top: 10px;
+  line-height: 22px;
+  font-size: 14px;
+  text-align: justify;
+  color: #465f70;
+}
+
+.left-bar .user-signature .user_created_at {
+  margin-top: 20px;
+  font-size: 12px;
+  display: block;
+  color: darkgrey;
+}
+
+.left-bar .user-signature .user_email {
+  font-size: 12px;
+  color: darkgrey;
+}
+
+.img-upload {
+  position: relative;
+  line-height: 32px;
+  font-size: 14px;
+  padding: 0;
+}
+
+.img-upload .avatar-img {
+  display: block;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+}
+
+.img-upload .upload-input {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  font-size: 30px;
+  outline: medium none;
+  position: absolute;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+  left: 0px;
+  top: 0px;
+}
+
+.img-upload .icon-btn {
+  height: 100%;
+  vertical-align: middle;
+  line-height: 98px;
+  text-align: center;
+  color: #fff;
+}
+
+.img-upload .upload-drag {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
 }
 
