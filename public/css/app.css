@@ -28057,7 +28057,6 @@ body {
 
 .left-bar .user-info .user-avatar .avatar-img {
   display: block;
-  border-radius: 5px;
   width: 60px;
   height: 60px;
 }
@@ -28322,6 +28321,12 @@ body {
   padding: 20px;
   background: #fff;
   z-index: 110;
+}
+
+.topics-index-page .alert-info,
+.categories-show-page .alert-info {
+  border: 1px solid #abdcff;
+  background-color: #f0faff;
 }
 
 /* Add container and footer space */

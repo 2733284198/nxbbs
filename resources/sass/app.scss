@@ -185,7 +185,6 @@ body {
 
             .avatar-img {
                 display: block;
-                border-radius: 5px;
                 width: 60px;
                 height: 60px;
             }
@@ -346,7 +345,8 @@ body {
     padding: 20px;
 }
 
-.topics-index-page,.categories-show-page {
+.topics-index-page,
+.categories-show-page {
     .topic-list {
         .nav>li>a {
             position: relative;
@@ -412,26 +412,29 @@ body {
                 color: #657786;
             }
         }
-.category_name {
-    font-size: 16px;
-    color: #17233d;
-    display: block;
-    margin-bottom: 4px;
-}
-.category_description {
-    font-size: 14px;
-    color: #515a6e;
-    line-height: 21px;
-    text-align: justify;
-}
-.ivu-alert-icon {
-    top: 50%;
-    left: 24px;
-    margin-top: -24px;
-    font-size: 28px;
-    position: absolute;
-    color: #2d8cf0;
-}
+
+        .category_name {
+            font-size: 16px;
+            color: #17233d;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .category_description {
+            font-size: 14px;
+            color: #515a6e;
+            line-height: 21px;
+            text-align: justify;
+        }
+
+        .ivu-alert-icon {
+            top: 50%;
+            left: 24px;
+            margin-top: -24px;
+            font-size: 28px;
+            position: absolute;
+            color: #2d8cf0;
+        }
     }
 
     .posts-addons {
@@ -443,7 +446,10 @@ body {
         background: #fff;
         z-index: 110;
     }
-
+    .alert-info {
+        border: 1px solid #abdcff;
+        background-color: #f0faff;
+    }
 }
 
 /* Add container and footer space */
@@ -474,27 +480,32 @@ body {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+
             &:hover {
                 text-decoration: none;
                 opacity: .8;
             }
         }
-       .fa {
-        position: absolute;
-        top: 17px;
-        left: 20px;
-        font-size: 12px;
-        color: #657786;
-        opacity: .6;
-       }
+
+        .fa {
+            position: absolute;
+            top: 17px;
+            left: 20px;
+            font-size: 12px;
+            color: #657786;
+            opacity: .6;
+        }
     }
+
     .active {
         color: #2d8cf0;
         font-weight: 700;
-        a{
+
+        a {
             color: #2d8cf0;
             font-weight: 700;
         }
+
         .fa {
             color: #2d8cf0;
         }
