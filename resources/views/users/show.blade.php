@@ -6,10 +6,10 @@
 
 <div class="row">
 
-    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 topic-list">
     {{-- 用户发布的内容 --}}
     <div class="card">
-        <div class="card-body">
+        <div class="card-body posts-container">
           <ul class="nav nav-tabs">
             <li class="nav-item"><a class="nav-link active bg-transparent" href="#">Ta 的话题</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Ta 的回复</a></li>
