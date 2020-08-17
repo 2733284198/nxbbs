@@ -50,8 +50,10 @@ body {
     margin-top: 0px;
     padding: 0.4rem 0;
 
-    .navbar-brand {
-        color: #2d8cf0;
+    .site-name {
+        font-size: 22px;
+    color: #2d8cf0;
+    font-weight: 700;
     }
 
     .avatar {
@@ -212,20 +214,22 @@ body {
     }
 
     .user-signature {
-            margin-top: 10px;
-            line-height: 22px;
-            font-size: 14px;
-            text-align: justify;
-            color: #465f70;
+        margin-top: 10px;
+        line-height: 22px;
+        font-size: 14px;
+        text-align: justify;
+        color: #465f70;
+
         .user_created_at {
-            margin-top:20px;
+            margin-top: 20px;
             font-size: 12px;
             display: block;
-            color:darkgrey
+            color: darkgrey
         }
+
         .user_email {
             font-size: 12px;
-            color:darkgrey
+            color: darkgrey
         }
     }
 }
@@ -273,4 +277,156 @@ body {
         left: 0;
         background: rgba(0, 0, 0, .2);
     }
+}
+
+
+/* Topic Index Page */
+.posts-filter-wrap {
+    .nav-item {
+        width: 80px;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+
+        .active {
+            background: #939faa;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 20px;
+        }
+    }
+}
+
+.posts-container {
+    padding: 0;
+
+    .post-item {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        min-height: 100px;
+        border-bottom: 1px solid #efefef;
+
+        &:hover {
+            background-color: #f7f9fb;
+        }
+
+        .post-item-content-text {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .post-item-praise {
+            width: 80px;
+            height: 100px;
+        }
+
+        .praise-wrap {
+            width: 50px;
+            height: 50px;
+            display: block;
+            background: #f7f9fb;
+            margin: 25px 20px 25px 10px;
+            border-radius: 3px;
+            text-align: center;
+            color: silver;
+        }
+
+        .praise-top {
+            height: 25px;
+            padding-top: 9px;
+        }
+    }
+}
+
+.pagination-wrap {
+    padding: 20px;
+}
+
+.topics-index-page {
+    .topic-list {
+        .nav>li>a {
+            position: relative;
+            display: block;
+            padding: 5px 14px;
+            font-size: 0.9em;
+        }
+
+        a {
+            color: #444444;
+        }
+
+        .meta {
+            font-size: 0.9em;
+            color: #b3b3b3;
+
+            a {
+                color: #b3b3b3;
+            }
+        }
+
+        .badge {
+            background-color: #d8d8d8;
+        }
+
+        hr {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            border: 0;
+            border-top: 1px solid #dcebf5;
+        }
+
+        .post-item-userinfo-avatar {
+            margin: 25px 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            z-index: 100;
+            position: relative;
+
+            .post-item-userinfo-avatar-img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                display: block;
+            }
+        }
+
+        .post-item-content {
+            width: calc(100% - 170px);
+            height: inherit;
+            padding: 25px 20px 25px 0;
+
+            .nickname {
+                color: #14171a;
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            .timeago {
+                margin-left: 10px;
+                font-size: 12px;
+                color: #657786;
+            }
+        }
+
+    }
+.posts-addons {
+    height: 72px;
+    border-bottom: 1px solid #efefef;
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    z-index: 110;
+}
+
+}
+
+/* Add container and footer space */
+#app>div.container {
+    margin-bottom: 100px;
 }
