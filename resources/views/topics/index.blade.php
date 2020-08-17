@@ -21,6 +21,11 @@
                     <li class="nav-item"><a class="nav-link {{ active_class( ! if_query('order', 'recent')) }}" href="{{ Request::url() }}?order=default">最后回复</a></li>
                     <li class="nav-item"><a class="nav-link {{ active_class(if_query('order', 'recent')) }}" href="{{ Request::url() }}?order=recent">最新发布</a></li>
                 </ul>
+                <div class="posts-compose-entrance">
+                    <a class="create" href="{{ route('topics.create') }}">
+                        <i class="fas fa-pencil-alt" style="font-size: 12px;"></i> 发布
+                      </a>
+                </div>
             </div>
 
             <div class="card-body posts-container">
