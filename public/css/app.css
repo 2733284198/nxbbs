@@ -17939,3 +17939,14 @@ body {
   font-style: normal;
 }
 
+/* 回复列表 */
+
+.topic-reply a {
+  color: inherit;
+}
+
+.topic-reply .meta {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
