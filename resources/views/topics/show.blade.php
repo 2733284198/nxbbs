@@ -1,63 +1,70 @@
 @extends('layouts.app')
 
+@section('title', $topic->title)
+@section('description', $topic->excerpt)
+
 @section('content')
 
-<div class="container">
-  <div class="col-md-10 offset-md-1">
+<div class="row page_detail">
+
+  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 topic-content">
     <div class="card ">
-      <div class="card-header">
-        <h1>Topic / Show #{{ $topic->id }}</h1>
-      </div>
-
       <div class="card-body">
-        <div class="card-block bg-light">
-          <div class="row">
-            <div class="col-md-6">
-              <a class="btn btn-link" href="{{ route('topics.index') }}"><- Back</a>
-            </div>
-            <div class="col-md-6">
-              <a class="btn btn-sm btn-warning float-right mt-1" href="{{ route('topics.edit', $topic->id) }}">
-                Edit
-              </a>
-            </div>
-          </div>
-        </div>
-        <br>
+        <h1 class="post_title">
+          {{ $topic->title }}
+        </h1>
 
-        <label>Title</label>
-<p>
-	{{ $topic->title }}
-</p> <label>Body</label>
-<p>
-	{{ $topic->body }}
-</p> <label>User_id</label>
-<p>
-	{{ $topic->user_id }}
-</p> <label>Category_id</label>
-<p>
-	{{ $topic->category_id }}
-</p> <label>Reply_count</label>
-<p>
-	{{ $topic->reply_count }}
-</p> <label>View_count</label>
-<p>
-	{{ $topic->view_count }}
-</p> <label>Last_reply_user_id</label>
-<p>
-	{{ $topic->last_reply_user_id }}
-</p> <label>Order</label>
-<p>
-	{{ $topic->order }}
-</p> <label>Excerpt</label>
-<p>
-	{{ $topic->excerpt }}
-</p> <label>Slug</label>
-<p>
-	{{ $topic->slug }}
-</p>
+
+        <div class="post_info">
+
+          <span class="popover__box popover_appreciate popover__box_hide">
+            <span class="popover_target">
+              <a href="{{ route('users.show', $topic->user->id) }}" class="post_owner post_info_meta">
+                {{ $topic->user->name }}
+              </a>
+            </span>
+          </span>
+          <em id="create_time" class="post_time post_info_meta"> {{ $topic->created_at->diffForHumans() }}</em>
+          <span class="post_discuss_num post_info_meta">
+            <span> {{ $topic->reply_count }}</span>
+            <span class="post_info_meta_inner_text">
+              浏览
+            </span>
+          </span>
+          <span class="post_info_meta_inner_text">
+            {{ $topic->category->name }}
+          </span>
+
+        </div>
+
+
+        <div class="topic-body mt-4 mb-4">
+          {!! $topic->body !!}
+        </div>
+
+        <div class="operate">
+          <hr>
+          <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-outline-secondary btn-sm" role="button">
+            <i class="far fa-edit"></i> 编辑
+          </a>
+          <a href="#" class="btn btn-outline-secondary btn-sm" role="button">
+            <i class="far fa-trash-alt"></i> 删除
+          </a>
+        </div>
+
       </div>
     </div>
   </div>
-</div>
 
-@endsection
+
+  <div class="col-lg-3 col-md-3 hidden-sm hidden-xs author-info">
+    <div class="card ">
+      <div class="card-body">
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+@stop

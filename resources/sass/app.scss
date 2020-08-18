@@ -451,3 +451,59 @@ body {
   line-height: 34px;
   margin-bottom: 21px;
 }
+
+// 帖子详情页
+.topic-body {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@import "topic_body";
+
+.topics-show-page {
+
+  .card {
+    padding: 15px;
+
+    h1 {
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+}
+
+.page_detail {
+  margin-top: 32px;
+  .post_title {
+    font-size: 24px !important;
+    font-weight: 500;
+    margin: 0;
+}
+  .post_info {
+    *zoom: 1;
+    color: rgba(0, 0, 0, .3);
+    font-size: 14px;
+    margin: 12px 0;
+
+    .popover_target {
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+    }
+
+    .post_owner {
+      color: #576b95;
+    }
+
+    .post_info_meta {
+      display: inline-block;
+      vertical-align: top;
+      padding-right: 15px;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+
+}
