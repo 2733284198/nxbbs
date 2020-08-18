@@ -4,31 +4,58 @@
 
 @section('content')
 
+
+<div class="nxbbs_nav_wrp">
+  <div class="nxbbs_nav_wrp_cont">
+    <!---->
+    <ul class="nxbbs_navs">
+      @foreach ($categorys as $category_info)
+      @if (isset($category) && $category_info->id == $category->id)
+      <li class="nxbbs_nav selected"><a href="{{ route('categories.show', $category_info->id) }}"
+          class="nxbbs_nav_link">{{$category_info->name}}</a></li>
+      @else
+      <li class="nxbbs_nav"><a href="{{ route('categories.show', $category_info->id) }}"
+          class="nxbbs_nav_link">{{$category_info->name}}</a></li>
+      @endif
+
+      @endforeach
+      <!---->
+    </ul>
+  </div>
+</div>
+
+
+
 <div class="row mb-5">
   <div class="col-lg-9 col-md-9 topic-list">
     @if (isset($category))
-    <div class="alert alert-info" role="alert">
-      {{ $category->name }} ：{{ $category->description }}
+    <div class="card nxbbs_category_head">
+      <div class="category_main"><img class="category_icon category_tag" src="https://res.wx.qq.com/community/dist/community/images/logo_miniprogram_013191.png"><span class="category_title">{{ $category->name }}</span><span class="category_description">{{ $category->description }}</span></div>
     </div>
-  @endif
+    @endif
     <div class="card ">
 
-      <div class="card-header bg-transparent">
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a class="nav-link {{ active_class( ! if_query('order', 'recent')) }}" href="{{ Request::url() }}?order=default">
+      <div class="card-header bg-transparent simple_card_header">
+        <ul class="title_tab">
+          <li>
+            <a class="{{ active_class( ! if_query('order', 'recent')) }}"
+              href="{{ Request::url() }}?order=default">
               最后回复
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link {{ active_class(if_query('order', 'recent')) }}" href="{{ Request::url() }}?order=recent">
+          <li>
+            <a class="{{ active_class(if_query('order', 'recent')) }}"
+              href="{{ Request::url() }}?order=recent">
               最新发布
             </a>
           </li>
         </ul>
+
+        <div class="mod_hd_extra"><a href="{{ route('topics.create') }}" class="btn btn-success">发帖</a></div>
+
       </div>
 
-      <div class="card-body">
+      <div class="simple_container_body">
         {{-- 话题列表 --}}
         @include('topics._topic_list', ['topics' => $topics])
         {{-- 分页 --}}

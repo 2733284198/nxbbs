@@ -14,8 +14,8 @@ class CategoriesController extends Controller
                         ->where('category_id', $category->id)
                         ->with('user', 'category')   // 预加载防止 N+1 问题
                         ->paginate(20);
-
+        $categorys = Category::all();
         // 传参变量话题和分类到模板中
-        return view('topics.index', compact('topics', 'category'));
+        return view('topics.index', compact('topics', 'category','categorys'));
     }
 }
