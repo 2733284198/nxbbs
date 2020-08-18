@@ -8,7 +8,7 @@
 
       <div class="media-heading mt-0 mb-1">
         <h2 class="post_title">
-          <a href="{{ route('topics.show', [$topic->id]) }}" title="{{ $topic->title }}">
+          <a href="{{ $topic->link() }}" title="{{ $topic->title }}">
             {{ $topic->title }}
           </a>
         </h2>

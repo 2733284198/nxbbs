@@ -44,7 +44,7 @@
           @foreach ($categories as $value)
           <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" value="{{ $value->id }}" id="{{ $value->id }}" name="category_id"
-              class="custom-control-input">
+              class="custom-control-input" {{ $topic->category_id == $value->id ? 'checked' : '' }}>
             <label class="custom-control-label" for="{{ $value->id }}">{{ $value->name }}</label>
           </div>
           @endforeach
