@@ -17056,6 +17056,40 @@ ul {
   border-bottom: 1px solid #000;
 }
 
+.navbar-static-top .header_ctrls_meta {
+  position: relative;
+  top: -3px;
+  display: inline-block;
+  margin-left: 29px;
+  vertical-align: middle;
+}
+
+.navbar-static-top .top_notice_box a {
+  position: relative;
+}
+
+.navbar-static-top .top_notice_box a .badge {
+  position: absolute;
+  top: -5px;
+  right: -2px;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-static-top .account_inbox_switch {
+  padding: 0 10px;
+}
+
+.navbar-static-top .icon_inbox {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 20px;
+  background: url(https://res.wx.qq.com/community/dist/community/images/nav_notice_icon_44f337.svg) no-repeat 50%;
+  background-size: cover;
+  line-height: 100px;
+  overflow: hidden;
+}
+
 .nxbbs_nav_wrp {
   width: 100%;
   box-sizing: border-box;
