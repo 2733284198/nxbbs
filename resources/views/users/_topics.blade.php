@@ -1,22 +1,28 @@
 @if (count($topics))
 
-  <ul class="list-group mt-4 border-0">
-    @foreach ($topics as $topic)
-      <li class="list-group-item pl-2 pr-2 border-right-0 border-left-0 @if($loop->first) border-top-0 @endif">
-        <a href="{{ $topic->link() }}">
+<ul class="list-group mt-4 border-0">
+  @foreach ($topics as $topic)
+
+
+
+  <li class="activity-info__item"><a href="{{ $topic->link() }}" class="link-to-post" target="_blank">
+      <div class="activity-info__item__ft"><strong class="activity-info__item__title">
           {{ $topic->title }}
-        </a>
-        <span class="meta float-right text-secondary">
-          {{ $topic->reply_count }} 回复
-          <span> ⋅ </span>
-          {{ $topic->created_at->diffForHumans() }}
-        </span>
-      </li>
-    @endforeach
-  </ul>
+        </strong>
+        <p class="activity-info__item__desc js_content">{{ strip_tags($topic->body) }} </p>
+      </div>
+    </a>
+    <div class="activity-info__extend">
+      <div class="activity-info__extend__hd">{{ $topic->created_at->diffForHumans() }} {{ $topic->reply_count }} 回复
+      </div>
+    </div>
+  </li>
+
+  @endforeach
+</ul>
 
 @else
-  <div class="empty-block">暂无数据 ~_~ </div>
+<div class="empty-block">暂无数据 ~_~ </div>
 @endif
 
 {{-- 分页 --}}

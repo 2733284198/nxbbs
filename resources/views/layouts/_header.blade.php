@@ -27,7 +27,8 @@
 
 
           <div class="header_ctrls_meta top_notice_box"><a href="{{ route('notifications.index') }}"
-              class="account_inbox_switch js_notice_box_switch notify_target"><i class="icon_inbox notify_target"></i>
+              class="account_inbox_switch js_notice_box_switch notify_target">
+              <i class="icon_inbox far fa-bell notify_target" aria-hidden="true"></i>
 
 
               @if (Auth::user()->notification_count > 0)
@@ -43,9 +44,9 @@
         <li class="nav-item dropdown"></li>
         <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
-          <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle" width="40px" height="40px">
+          <img src="{{ Auth::user()->avatar }}" class="user_avatar">
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu skin_pop_inner" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">
             个人中心
           </a>
@@ -54,7 +55,7 @@
           </a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" id="logout" href="{{ route('logout') }}">
-            <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('您确定要退出吗？');">
+            <form action="{{ route('logout') }}" method="POST">
               {{ csrf_field() }}
               <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
             </form>

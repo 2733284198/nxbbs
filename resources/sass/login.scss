@@ -1,0 +1,46 @@
+body {
+  margin-bottom: 0px !important;
+}
+
+body {
+  background-image: url(/static/img/bg-pattern-light.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.navbar-static-top,
+.footer {
+  display: none;
+}
+
+.card {
+  border: none;
+  -webkit-box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+  margin-bottom: 24px;
+}
+
+.card-header:first-child {
+  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.bg-primary {
+  background-color: #536de6 !important;
+}
+
+.col-lg-5 {
+  margin-top: 4.5rem !important;
+}
+
+.p-4 {
+  padding: 2.25rem !important;
+}

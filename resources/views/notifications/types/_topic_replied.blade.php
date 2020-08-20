@@ -1,11 +1,11 @@
-<li class="media @if ( ! $loop->last) border-bottom @endif">
-  <div class="media-left">
+<li class="message-list__item @if ( ! $loop->last) border-bottom @endif">
+  <div class="media_avatar">
     <a href="{{ route('users.show', $notification->data['user_id']) }}">
       <img class="media-object img-thumbnail mr-3" alt="{{ $notification->data['user_name'] }}" src="{{ $notification->data['user_avatar'] }}" style="width:48px;height:48px;" />
     </a>
   </div>
 
-  <div class="media-body">
+  <div class="media-body message_item__info">
     <div class="media-heading mt-0 mb-1 text-secondary">
       <a href="{{ route('users.show', $notification->data['user_id']) }}">{{ $notification->data['user_name'] }}</a>
       评论了
