@@ -8,7 +8,7 @@
 
         <div class="card-header pt-4 pb-4 text-center bg-success">
           <a href="index.html">
-            <span><img src="https://coderthemes.com/hyper/modern/assets/images/logo.png" alt="" height="18"></span>
+            <span><img src="static/img/logo.png" alt="" height="18"></span>
           </a>
         </div>
 

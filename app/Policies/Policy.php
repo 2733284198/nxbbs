@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
-
+use Dcat\Admin\Admin;
 class Policy
 {
     use HandlesAuthorization;
@@ -14,9 +14,11 @@ class Policy
     }
 
     public function before($user, $ability)
-	{
-	    // if ($user->isSuperAdmin()) {
-	    // 		return true;
+    {
+        // 如果用户拥有管理内容的权限的话，即授权通过
+        if ($user->can('users')) {
+            return true;
+        }
+    }
 	    // }
 	}
-}
