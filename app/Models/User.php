@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-use Dcat\Admin\Traits\HasDateTimeFormatter;
+
 use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -11,7 +11,6 @@ use Auth;
 class User extends Authenticatable implements MustVerifyEmailContract
 {
     use MustVerifyEmailTrait;
-    use HasDateTimeFormatter;
     use Notifiable {
         notify as protected laravelNotify;
     }
@@ -63,19 +62,5 @@ class User extends Authenticatable implements MustVerifyEmailContract
         $this->notification_count = 0;
         $this->save();
         $this->unreadNotifications->markAsRead();
-    }
-
-        /**
-     * A user has and belongs to many roles.
-     *
-     * @return BelongsToMany
-     */
-    public function roles(): BelongsToMany
-    {
-        $pivotTable = config('admin.database.role_users_table');
-
-        $relatedModel = config('admin.database.roles_model');
-
-        return $this->belongsToMany($relatedModel, $pivotTable, 'user_id', 'role_id');
     }
 }
