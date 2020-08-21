@@ -47,6 +47,16 @@
           <img src="{{ Auth::user()->avatar }}" class="user_avatar">
         </a>
         <div class="dropdown-menu skin_pop_inner" aria-labelledby="navbarDropdown">
+
+
+          @can('manage_contents')
+          <a class="dropdown-item" href="{{ url(config('administrator.uri')) }}">
+            管理后台
+          </a>
+          <div class="dropdown-divider"></div>
+        @endcan
+
+
           <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">
             个人中心
           </a>
