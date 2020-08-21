@@ -16,7 +16,7 @@
 			//so that it doesn't keep reopening.
 			if (viewModel.lastItem === null)
 			{
-				$tableContainer.css('margin-right', 290);
+				$tableContainer.css('margin-right', 300);
 				$element.hide();
 				$child.css('marginLeft', expandWidth + 2);
 			}
@@ -42,7 +42,7 @@
 					$element.hide();
 				});
 
-				$tableContainer.stop().animate({marginRight: 290}, 150, function()
+				$tableContainer.stop().animate({marginRight: 300}, 150, function()
 				{
 					window.admin.resizePage();
 				});
@@ -242,7 +242,7 @@
 
 					// If the select2 field has a default value,
 					// initSelection will be called before the admin object
-					// is correctly initialized. 
+					// is correctly initialized.
 					if (!val || typeof admin === 'undefined')
 						return callback(null);
 
