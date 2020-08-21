@@ -17032,6 +17032,23 @@ ul {
   margin-bottom: 16px;
 }
 
+.card-header {
+  background-color: #fff;
+  border-top: 1px solid #07c160;
+  border-bottom: none;
+}
+
+.card-header:before {
+  content: " ";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-right: 7px;
+}
+
 .page-link {
   color: #38c172;
 }
@@ -17218,6 +17235,7 @@ ul {
 }
 
 .simple_card_header {
+  border-top: 0px;
   font-size: 14px;
   font-weight: 400;
   padding: 18px 30px;
@@ -17225,6 +17243,10 @@ ul {
   border-radius: 4px 4px 0 0;
   background: linear-gradient(#fefefe, #fdfdfd, #fcfcfc, #fbfbfb, #fafafa);
   border-bottom: none;
+}
+
+.simple_card_header:before {
+  display: none;
 }
 
 .simple_card_header .title_tab {
@@ -18441,5 +18463,41 @@ body {
 
 .message_item__info a {
   color: rgba(0, 0, 0, 0.9);
+}
+
+.rank__container {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+
+.rank__container .rank__item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 14px;
+  min-height: 24px;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+}
+
+.rank__container .rank__item .rank__avatar {
+  position: absolute;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  margin-top: -14px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.rank__container .rank__item .rank__item__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 6em;
+  color: rgba(0, 0, 0, 0.9);
+  line-height: 24px;
 }
 

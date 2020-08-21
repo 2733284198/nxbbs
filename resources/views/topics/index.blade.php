@@ -27,7 +27,7 @@
 
 
 <div class="row mb-5">
-  <div class="col-lg-9 col-md-9 topic-list">
+  <div class="col-lg-8 col-md-8 topic-list">
     @if (isset($category))
     <div class="card nxbbs_category_head">
       <div class="category_main"><img class="category_icon category_tag" src="https://res.wx.qq.com/community/dist/community/images/logo_miniprogram_013191.png"><span class="category_title">{{ $category->name }}</span><span class="category_description">{{ $category->description }}</span></div>
@@ -66,7 +66,7 @@
     </div>
   </div>
 
-  <div class="col-lg-3 col-md-3 sidebar">
+  <div class="col-lg-4 col-md-4 sidebar">
     @include('topics._sidebar')
   </div>
 </div>
