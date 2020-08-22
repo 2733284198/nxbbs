@@ -61,7 +61,7 @@
   </div>
 </div>
 
-@endsection
+@stop
 
 @section('styles')
   <link rel="stylesheet" type="text/css" href="{{ asset('static/css/simditor.css') }}">

@@ -11202,9 +11202,8 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #000;
+  text-align: center;
 }
 
 .footer .container {
@@ -11386,7 +11385,7 @@ body {
   margin-top: 12px;
   margin-bottom: 12px;
   border: 0;
-  border-top: 1px solid #dcebf5;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Add container and footer space */
@@ -11471,228 +11470,6 @@ body {
   font-size: 22px;
   line-height: 34px;
   margin-bottom: 21px;
-}
-
-.usershow {
-  margin-top: 46px;
-}
-
-.usershow .personal_header {
-  position: relative;
-  padding: 20px 374px 20px 162px;
-  background-color: #fff;
-  margin-bottom: 16px;
-  min-height: 160px;
-  border-radius: 4px;
-}
-
-.usershow .personal_header .base-info__avatar {
-  position: absolute;
-  top: 20px;
-  left: 18px;
-  width: 120px;
-  height: 120px;
-  margin-right: 24px;
-  display: inline-block;
-}
-
-.usershow .personal_header .base-info__name {
-  display: inline-block;
-  font-size: 20px;
-  width: auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
-  margin-bottom: 0;
-  font-weight: 400;
-  line-height: 25px;
-}
-
-.usershow .personal_header .base-info__desc {
-  color: rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  word-break: break-all;
-}
-
-.usershow .personal_header .base-info {
-  position: relative;
-}
-
-.usershow .personal_header .base-info__ft {
-  overflow: hidden;
-  margin-top: 12px;
-}
-
-.usershow .personal_header .base-info__ft .btn {
-  margin-right: 10px;
-  font-size: 14px;
-}
-
-.usershow .personal_header .home_page_hd_footer {
-  position: absolute;
-  top: 60%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-.usershow .personal_header .home_page_hd_footer_item:first-child {
-  margin-left: 0;
-}
-
-.usershow .personal_header .home_page_hd_footer_item {
-  display: inline-block;
-  text-align: center;
-  margin-left: 60px;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.usershow .personal_header .home_page_hd_footer_item:last-child {
-  margin-right: 80px;
-}
-
-.usershow .personal_header .home_page_hd_footer_item_bd {
-  font-size: 22px;
-}
-
-.usershow .personal_header .home_page_hd_footer_item_hd {
-  position: relative;
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-
-.usershow .personal_header .created_at {
-  vertical-align: super;
-  font-size: 12px;
-  margin-left: 20px;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.usershow .mod_default_hd {
-  position: relative;
-  margin-bottom: 2px;
-}
-
-.usershow .mod_default_hd h4 {
-  font-weight: 500;
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 0;
-  padding: 0;
-  font-size: 13px;
-}
-
-.usershow .mod_default_hd .fa-envelope {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  margin-right: 8px;
-  vertical-align: middle;
-  margin-top: -6px;
-  vertical-align: inherit;
-  color: #07c160;
-}
-
-.usershow .mod_default_hd .mod_hd_extra {
-  position: absolute;
-  right: 0;
-  top: -4px;
-}
-
-.usershow .classify-list_box .nav-item a {
-  vertical-align: top;
-  box-sizing: border-box;
-  line-height: 30px;
-  padding: 0 18px;
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 0.6em;
-  cursor: pointer;
-  color: #9a9a9a;
-  font-size: 14px;
-  background-color: #f5f5f5;
-  color: rgba(0, 0, 0, 0.9);
-  border-radius: 4px;
-  border: 0;
-}
-
-.usershow .classify-list_box .nav-item a:hover {
-  text-decoration: none;
-  background-color: #e7e7e7;
-}
-
-.usershow .classify-list_box .nav-item .active {
-  background-color: rgba(7, 193, 96, 0.06);
-  color: #07c160;
-  font-weight: 500;
-}
-
-.usershow .classify-list_box .activity-info__item {
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.usershow .classify-list_box .activity-info__item:last-child {
-  border: none;
-}
-
-.usershow .classify-list_box .activity-info__item a {
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.usershow .classify-list_box .activity-info__item .activity-info__item__title {
-  overflow: hidden;
-  word-break: break-all;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  font-size: 16px;
-  font-weight: 400;
-  display: -webkit-box;
-  margin-bottom: 4px;
-}
-
-.usershow .classify-list_box .activity-info__item .activity-info__item__desc {
-  color: rgba(0, 0, 0, 0.5);
-  margin-top: 4;
-  display: -webkit-box;
-  max-height: 3.2em;
-  overflow: hidden;
-  word-break: break-all;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.usershow .classify-list_box .activity-info__item .activity-info__extend {
-  position: relative;
-  color: rgba(0, 0, 0, 0.5);
-  margin-top: 20px;
-}
-
-.usershow .classify-list_box .activity-info__item__comment {
-  margin-bottom: 20px;
-  overflow: hidden;
-  word-break: break-all;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  max-height: 4.8em;
-}
-
-.usershow .classify-list_box .activity-info__item__comment__inner:after,
-.usershow .classify-list_box .activity-info__item__comment__inner:before {
-  content: '"';
-}
-
-.usershow .classify-list_box .activity-info__item_quote {
-  padding-left: 15px;
-  border-left: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 .base-info_edit .img-upload {
@@ -11849,7 +11626,7 @@ body {
   display: inline-block;
 }
 
-.page_mod_blog_panel .page_mod_blog_panel_head_desc {
+.page_mod_blog_panel .panel_head_desc {
   color: rgba(0, 0, 0, 0.5);
   font-size: 12px;
   overflow: hidden;
@@ -11873,25 +11650,25 @@ body {
   justify-content: space-around;
 }
 
-.page_mod_blog_panel .page_mod_blog_panel_body_item {
+.page_mod_blog_panel .panel_body_item {
   width: 70px;
   text-align: center;
 }
 
-.page_mod_blog_panel .page_mod_blog_panel_body_item_title {
+.page_mod_blog_panel .panel_body_item_title {
   position: relative;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 0px;
 }
 
-.page_mod_blog_panel .page_mod_blog_panel_body_item_desc {
+.page_mod_blog_panel .panel_body_item_desc {
   font-size: 20px;
   color: rgba(0, 0, 0, 0.9);
   margin-bottom: 0px;
 }
 
-.page_mod_blog_panel .page_mod_blog_panel_body_item {
+.page_mod_blog_panel .panel_body_item {
   width: 70px;
   text-align: center;
 }

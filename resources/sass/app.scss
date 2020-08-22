@@ -319,9 +319,8 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #000;
+  text-align: center;
 
   .container {
     padding-right: 15px;
@@ -474,7 +473,7 @@ body {
       margin-top: 12px;
       margin-bottom: 12px;
       border: 0;
-      border-top: 1px solid #dcebf5;
+      border-top: 1px solid rgba(0,0,0,.1);
     }
   }
 }
@@ -564,241 +563,6 @@ body {
   font-size: 22px;
   line-height: 34px;
   margin-bottom: 21px;
-}
-
-
-// 个人中心
-.usershow {
-  margin-top: 46px;
-
-  .personal_header {
-    position: relative;
-    padding: 20px 374px 20px 162px;
-    background-color: #fff;
-    margin-bottom: 16px;
-    min-height: 160px;
-    border-radius: 4px;
-
-    .base-info__avatar {
-      position: absolute;
-      top: 20px;
-      left: 18px;
-      width: 120px;
-      height: 120px;
-      margin-right: 24px;
-      display: inline-block;
-    }
-
-    .base-info__name {
-      display: inline-block;
-      font-size: 20px;
-      width: auto;
-      overflow: hidden;
-      -o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      word-wrap: normal;
-      margin-bottom: 0;
-      font-weight: 400;
-      line-height: 25px;
-    }
-
-    .base-info__desc {
-      color: rgba(0, 0, 0, .5);
-      overflow: hidden;
-      -o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      word-break: break-all;
-    }
-
-    .base-info {
-      position: relative;
-    }
-
-    .base-info__ft {
-      overflow: hidden;
-      margin-top: 12px;
-
-      .btn {
-        margin-right: 10px;
-        font-size: 14px;
-      }
-    }
-
-    .home_page_hd_footer {
-      position: absolute;
-      top: 60%;
-      right: 0;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
-    }
-
-    .home_page_hd_footer_item:first-child {
-      margin-left: 0;
-    }
-
-    .home_page_hd_footer_item {
-      display: inline-block;
-      text-align: center;
-      margin-left: 60px;
-      color: rgba(0, 0, 0, .9);
-    }
-
-    .home_page_hd_footer_item:last-child {
-      margin-right: 80px;
-    }
-
-    .home_page_hd_footer_item_bd {
-      font-size: 22px;
-    }
-
-    .home_page_hd_footer_item_hd {
-      position: relative;
-      font-size: 16px;
-      margin-bottom: 12px;
-    }
-
-    .created_at {
-      vertical-align: super;
-      font-size: 12px;
-      margin-left: 20px;
-      color: rgba(0, 0, 0, 0.5);
-    }
-  }
-
-  .mod_default_hd {
-    position: relative;
-    margin-bottom: 2px;
-
-    h4 {
-      font-weight: 500;
-      display: inline-block;
-      margin-right: 20px;
-      margin-bottom: 0;
-      padding: 0;
-      font-size: 13px;
-    }
-
-    .fa-envelope {
-      width: 20px;
-      height: 20px;
-      display: inline-block;
-      margin-right: 8px;
-      vertical-align: middle;
-      margin-top: -6px;
-      vertical-align: inherit;
-      color: #07c160;
-    }
-
-    .mod_hd_extra {
-      position: absolute;
-      right: 0;
-      top: -4px;
-    }
-  }
-
-  .classify-list_box {
-    .nav-item {
-      a {
-        vertical-align: top;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        line-height: 30px;
-        padding: 0 18px;
-        display: inline-block;
-        margin-right: 10px;
-        margin-bottom: .6em;
-        cursor: pointer;
-        color: #9a9a9a;
-        font-size: 14px;
-        background-color: #f5f5f5;
-        color: rgba(0, 0, 0, .9);
-        border-radius: 4px;
-        border: 0;
-
-        &:hover {
-          text-decoration: none;
-          background-color: #e7e7e7;
-        }
-      }
-
-      .active {
-        background-color: rgba(7, 193, 96, .06);
-        color: #07c160;
-        font-weight: 500;
-      }
-    }
-
-    .activity-info__item {
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, .1);
-
-      &:last-child {
-        border: none;
-      }
-
-      a {
-        color: rgba(0, 0, 0, .9);
-      }
-
-      .activity-info__item__title {
-        overflow: hidden;
-        word-break: break-all;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        font-size: 16px;
-        font-weight: 400;
-        display: -webkit-box;
-        margin-bottom: 4px;
-      }
-
-      .activity-info__item__desc {
-        color: rgba(0, 0, 0, .5);
-        margin-top: 4;
-        display: -webkit-box;
-        max-height: 3.2em;
-        overflow: hidden;
-        word-break: break-all;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-      }
-
-      .activity-info__extend {
-        position: relative;
-        color: rgba(0, 0, 0, .5);
-        margin-top: 20px;
-      }
-    }
-
-    .activity-info__item__comment {
-      margin-bottom: 20px;
-      overflow: hidden;
-      word-break: break-all;
-      -o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      max-height: 4.8em;
-    }
-
-    .activity-info__item__comment__inner:after,
-    .activity-info__item__comment__inner:before {
-      content: '"';
-    }
-
-    .activity-info__item_quote {
-      padding-left: 15px;
-      border-left: 3px solid rgba(0, 0, 0, .1);
-    }
-  }
 }
 
 
@@ -975,7 +739,7 @@ body {
     display: inline-block;
   }
 
-  .page_mod_blog_panel_head_desc {
+  .panel_head_desc {
     color: rgba(0, 0, 0, .5);
     font-size: 12px;
     overflow: hidden;
@@ -1003,25 +767,25 @@ body {
     justify-content: space-around;
   }
 
-  .page_mod_blog_panel_body_item {
+  .panel_body_item {
     width: 70px;
     text-align: center;
   }
 
-  .page_mod_blog_panel_body_item_title {
+  .panel_body_item_title {
     position: relative;
     font-size: 12px;
     color: rgba(0, 0, 0, .5);
     margin-bottom: 0px;
   }
 
-  .page_mod_blog_panel_body_item_desc {
+  .panel_body_item_desc {
     font-size: 20px;
     color: rgba(0, 0, 0, .9);
     margin-bottom: 0px;
   }
 
-  .page_mod_blog_panel_body_item {
+  .panel_body_item {
     width: 70px;
     text-align: center;
   }

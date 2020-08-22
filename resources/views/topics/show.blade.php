@@ -87,7 +87,7 @@
 
 </div>
 
-@endsection
+@stop
 
 
 @section('styles')
