@@ -9,12 +9,13 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>@yield('title', 'LaraBBS') - {{ setting('site_name', 'Laravel 进阶教程') }}</title>
-  <meta name="description" content="@yield('description', setting('seo_description', 'LaraBBS 爱好者社区。'))" />
-  <meta name="keyword" content="@yield('keyword', setting('seo_keyword', 'LaraBBS,社区,论坛,开发者论坛'))" />
+  <title>@yield('title', 'LaraBBS') - {{ setting('site_name', '产品交流社区') }}</title>
+  <meta name="description" content="@yield('description', setting('seo_description', '产品交流社区'))" />
+  <meta name="keyword" content="@yield('keyword', setting('seo_keyword', '南相,社区,论坛,开发者论坛'))" />
 
   <!-- Styles -->
   <link href="{{ mix('static/css/app.css') }}" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
   @yield('styles')
 
 </head>

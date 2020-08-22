@@ -15,7 +15,7 @@
 
         <img src="{{ $user->avatar }}" alt="" class="base-info__avatar">
         <div class="home_page_hd_bd"><strong class="base-info__name">{{ $user->name }}
-          </strong><span class="created_at">注册于 {{ $user->created_at->diffForHumans() }}</span>
+          </strong>
           <div class="base-info__descbox">
             <p class="base-info__desc js_introduce">
               @if ($user->introduction)
@@ -75,10 +75,23 @@
       <div class="card-body">
         <div class="mod_default_hd">
           <h4><i class="fa fa-envelope" aria-hidden="true"></i>{{ $user->email }}</h4>
-          <div class="mod_hd_extra"><a href="javascript:;" class="btn btn-success btn-sm">更换</a></div>
+          <div class="mod_hd_extra"><a href="{{ route('users.edit', Auth::id()) }}" class="btn btn-success btn-sm">更换</a></div>
         </div>
       </div>
     </div>
+
+    <div class="card" style="line-height: 30px;">
+      <div class="card-body">
+        <div class="mod_default_hd">
+          <h4><i class="fa fa-envelope" aria-hidden="true"></i>注册时间：{{ $user->created_at->diffForHumans() }}</h4>
+        </div>
+        <div class="mod_default_hd">
+          <h4><i class="fa fa-envelope" aria-hidden="true"></i>最后活跃：{{ $user->last_actived_at->diffForHumans() }}</h4>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">

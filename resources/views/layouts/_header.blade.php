@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav mr-auto header_navs">
-        <li class="nav-item {{ active_class(if_route('topics.index')) }}"><a class="nav-link"
+        <li class="nav-item"><a class="nav-link"
             href="{{ route('topics.index') }}">话题</a></li>
       </ul>
 

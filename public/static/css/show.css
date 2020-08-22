@@ -173,3 +173,7 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.operate {
+  text-align: right;
+}
+
