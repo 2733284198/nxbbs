@@ -1,3 +1,4 @@
+body,#wrapper {height: 100%;}
 body {
   font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
 }
@@ -125,7 +126,8 @@ border-left: 1px solid #d9d9d9 !important;
 border-right: 0px;
 border-top: 1px solid #d9d9d9 !important;
 border-bottom: 1px solid #d9d9d9 !important;
-border-radius: 0.25rem;
+
+border-radius:0.25rem 0 0 0.25rem;
 color: darkgrey;
 float: left;
 }
@@ -255,3 +257,14 @@ thead tr th {
 .per_page {float: left;}
 .paginator {float: right;}
 .total {float: left;}
+.personal_info {
+  position: absolute;
+    bottom: 30px;
+    padding: 20px;
+}
+.personal_info a {margin-left: 20px;}
+
+#settings_page form.settings_form > div {
+  display: block;
+}
+

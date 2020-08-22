@@ -9858,16 +9858,14 @@ Version: 3.4.1 Timestamp: Thu Jun 27 18:02:10 PDT 2013
     padding: 0 0 0 8px;
     overflow: hidden;
     position: relative;
-
-    border: 1px solid #aaa;
     white-space: nowrap;
     line-height: 26px;
     color: #444;
     text-decoration: none;
 
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
+    -webkit-border-radius:0 0.25rem 0.25rem 0;
+       -moz-border-radius:0 0.25rem 0.25rem 0;
+       border-radius:0 0.25rem 0.25rem 0;
 
     -webkit-background-clip: padding-box;
        -moz-background-clip: padding;
@@ -10130,15 +10128,6 @@ Version: 3.4.1 Timestamp: Thu Jun 27 18:02:10 PDT 2013
     -webkit-border-bottom-right-radius: 0;
         -moz-border-radius-bottomright: 0;
             border-bottom-right-radius: 0;
-
-    background-color: #eee;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(0.5, #eeeeee));
-    background-image: -webkit-linear-gradient(center bottom, white 0%, #eeeeee 50%);
-    background-image: -moz-linear-gradient(center bottom, white 0%, #eeeeee 50%);
-    background-image: -o-linear-gradient(bottom, white 0%, #eeeeee 50%);
-    background-image: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 50%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
-    background-image: linear-gradient(top, #ffffff 0%,#eeeeee 50%);
 }
 
 .select2-dropdown-open.select2-drop-above .select2-choice,
