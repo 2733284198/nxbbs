@@ -12,15 +12,11 @@
 </div>
 
 
-@section('styles')
-  <link rel="stylesheet" type="text/css" href="{{ asset('static/css/simditor.css') }}">
-@stop
-
 @section('scripts')
-  <script type="text/javascript" src="{{ asset('js/module.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('js/hotkeys.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('js/uploader.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('js/simditor.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('static/js/module.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('static/js/hotkeys.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('static/js/uploader.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('static/js/simditor.js') }}"></script>
 
   <script>
     $(document).ready(function() {

@@ -11750,7 +11750,6 @@ div.upload_container input {
 }
 .editForm > div.image div.upload_container div.uploader,
 .editForm > div.file div.upload_container div.uploader {
-  background: url(../img/upload.png) no-repeat;
   padding-left: 25px;
 }
 .editForm > div.image div.upload_container div.plupload,
@@ -11920,7 +11919,6 @@ div.upload_container input {
 }
 #settings_page form.settings_form > div.image div.upload_container div.uploader,
 #settings_page form.settings_form > div.file div.upload_container div.uploader {
-  background: url(../img/upload.png) no-repeat;
   padding-left: 25px;
 }
 #settings_page form.settings_form > div.image div.upload_container div.plupload,

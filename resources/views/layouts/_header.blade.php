@@ -2,7 +2,8 @@
   <div class="container">
     <!-- Branding Image -->
     <a class="navbar-brand " href="{{ url('/') }}">
-      南相产品交流社区
+      <img src="{{ '/static/'.setting('logo') }}" alt="" height="28">
+      <span class="site_name">{{ setting('site_name') }}</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

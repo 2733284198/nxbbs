@@ -15,12 +15,18 @@ return [
         'site_name' => [
             // 表单标题
             'title' => '站点名称',
-
             // 表单条目类型
             'type' => 'text',
-
             // 字数限制
             'limit' => 50,
+        ],
+        'logo' => [
+            'title' => '网站LOGO',
+            'type' => 'image',
+            'location' => public_path() . '/static/',
+            'naming' => 'random',
+            'length' => 20,
+            'size_limit' => 0.1,
         ],
         'contact_email' => [
             'title' => '联系人邮箱',
@@ -51,13 +57,13 @@ return [
     ],
 
     // 数据即将保存时触发的钩子，可以对用户提交的数据做修改
-    'before_save' => function(&$data)
-    {
-        // 为网站名称加上后缀，加上判断是为了防止多次添加
-        if (strpos($data['site_name'], 'Powered by NXBBS') === false) {
-            $data['site_name'] .= ' - Powered by NXBBS';
-        }
-    },
+    // 'before_save' => function(&$data)
+    // {
+    //     // 为网站名称加上后缀，加上判断是为了防止多次添加
+    //     if (strpos($data['site_name'], 'Powered by NXBBS') === false) {
+    //         $data['site_name'] .= ' - Powered by NXBBS';
+    //     }
+    // },
 
     // 你可以自定义多个动作，每一个动作为设置页面底部的『其他操作』区块
     'actions' => [

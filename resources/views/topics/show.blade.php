@@ -87,4 +87,11 @@
 
 
 </div>
+
+@endsection
+
+
+@section('styles')
+  <link rel="stylesheet" type="text/css" href="{{ asset('static/css/show.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('static/css/simditor.css') }}">
 @stop
