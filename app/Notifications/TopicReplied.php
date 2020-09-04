@@ -7,6 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use App\Models\Reply;
+use App\Models\Topic;
 
 class TopicReplied extends Notification implements ShouldQueue
 {
@@ -18,6 +19,7 @@ class TopicReplied extends Notification implements ShouldQueue
     {
         // 注入回复实体，方便 toDatabase 方法中的使用
         $this->reply = $reply;
+        
     }
 
     public function via($notifiable)

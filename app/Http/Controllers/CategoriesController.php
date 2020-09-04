@@ -19,6 +19,7 @@ class CategoriesController extends Controller
         $categorys = Category::all();
         // 活跃用户列表
         $active_users = $user->getActiveUsers();
-        return view('topics.index', compact('topics', 'category','categorys', 'active_users'));
+        $tops = $topic->where('top', 1)->orderBy('updated_at', 'desc')->get();
+        return view('topics.index', compact('topics', 'category','categorys', 'active_users','tops'));
     }
 }

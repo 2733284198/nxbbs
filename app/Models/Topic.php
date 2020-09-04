@@ -1,10 +1,14 @@
 <?php
 
 namespace App\Models;
+use Illuminate\Notifications\Notifiable;
 
 class Topic extends Model
 {
-    protected $fillable = ['title', 'body', 'category_id', 'excerpt', 'slug'];
+    protected $fillable = ['title', 'body', 'category_id','type_id', 'excerpt', 'slug'];
+
+
+    use Notifiable;
 
     public function scopeWithOrder($query, $order)
     {
@@ -14,6 +18,9 @@ class Topic extends Model
                 $query->recent();
                 break;
 
+                case 'attention':
+                    $query->attention();
+                    break;
             default:
                 $query->recentReplied();
                 break;
@@ -27,6 +34,11 @@ class Topic extends Model
         return $query->orderBy('updated_at', 'desc');
     }
 
+    public function scopeAttention($query)
+    {
+        return $query->orderBy('created_at', 'desc');
+    }
+
     public function scopeRecent($query)
     {
         // 按照创建时间排序
@@ -36,6 +48,11 @@ class Topic extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
     }
 
     public function user()

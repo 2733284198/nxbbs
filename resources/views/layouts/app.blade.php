@@ -40,6 +40,7 @@
   @endif
   <!-- Scripts -->
   <script src="{{ mix('static/js/app.js') }}"></script>
+  <script src="{{ mix('static/js/create.js') }}"></script>
   @yield('scripts')
 </body>
 

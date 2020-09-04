@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 use Auth;
+use App\Models\Topic;
 
 class User extends Authenticatable implements MustVerifyEmailContract
 {
@@ -104,7 +105,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
 
     public function follow($user_ids)
     {
-        if ( ! is_array($user_ids)) {
+        if (!is_array($user_ids)) {
             $user_ids = compact('user_ids');
         }
         $this->followings()->sync($user_ids, false);
@@ -112,7 +113,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
 
     public function unfollow($user_ids)
     {
-        if ( ! is_array($user_ids)) {
+        if (!is_array($user_ids)) {
             $user_ids = compact('user_ids');
         }
         $this->followings()->detach($user_ids);
@@ -121,5 +122,14 @@ class User extends Authenticatable implements MustVerifyEmailContract
     public function isFollowing($user_id)
     {
         return $this->followings->contains($user_id);
+    }
+
+    public function feed()
+    {
+        $user_ids = $this->followings->pluck('id')->toArray();
+        array_push($user_ids, $this->id);
+        return Topic::whereIn('user_id', $user_ids)
+            ->with('user')
+            ->orderBy('created_at', 'desc');
     }
 }

@@ -5,16 +5,15 @@
       <img src="{{ '/static/'.setting('logo') }}" alt="" height="28">
       <span class="site_name">{{ setting('site_name') }}</span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav mr-auto header_navs">
-        <li class="nav-item"><a class="nav-link"
-            href="{{ route('topics.index') }}">话题</a></li>
+        <li class="nav-item {{ active_class(if_route('topics.index')) }}"><a class="nav-link" href="{{ route('topics.index') }}">话题</a></li>
+        <li class="nav-item {{ active_class(if_route('articles.index')) }}"><a class="nav-link" href="{{ route('articles.index') }}">文章</a></li>
       </ul>
 
       <!-- Right Side Of Navbar -->
@@ -27,8 +26,7 @@
         <li class="nav-item dropdown" style="display: inline-block;line-height: 40px;margin-right: 20px;">
 
 
-          <div class="header_ctrls_meta top_notice_box"><a href="{{ route('notifications.index') }}"
-              class="account_inbox_switch js_notice_box_switch notify_target">
+          <div class="header_ctrls_meta top_notice_box"><a href="{{ route('notifications.index') }}" class="account_inbox_switch js_notice_box_switch notify_target">
               <i class="icon_inbox far fa-bell notify_target" aria-hidden="true"></i>
 
 
@@ -43,20 +41,18 @@
         </li>
 
         <li class="nav-item dropdown"></li>
-        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img src="{{ Auth::user()->avatar }}" class="user_avatar">
         </a>
         <div class="dropdown-menu skin_pop_inner" aria-labelledby="navbarDropdown">
 
 
           @can('manage_contents')
-          <a class="dropdown-item" href="{{ url(config('administrator.uri')) }}">
+          <a class="dropdown-item" href="{{ route('admin.index') }}">
             管理后台
           </a>
           <div class="dropdown-divider"></div>
-        @endcan
-
+          @endcan
 
           <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">
             个人中心

@@ -37308,7 +37308,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     broadcaster: 'pusher',
 //     key: process.env.MIX_PUSHER_APP_KEY,
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
+//     forceTLS: true
 // });
 
 /***/ }),
@@ -37346,6 +37346,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/notice.scss":
+/*!************************************!*\
+  !*** ./resources/sass/notice.scss ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/show.scss":
 /*!**********************************!*\
   !*** ./resources/sass/show.scss ***!
@@ -37369,18 +37380,19 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/login.scss ./resources/sass/show.scss ./resources/sass/follow.scss ./resources/sass/userinfo.scss ***!
-  \********************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/login.scss ./resources/sass/show.scss ./resources/sass/follow.scss ./resources/sass/userinfo.scss ./resources/sass/notice.scss ***!
+  \*************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\WWW\nxbbs\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\WWW\nxbbs\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! D:\WWW\nxbbs\resources\sass\login.scss */"./resources/sass/login.scss");
-__webpack_require__(/*! D:\WWW\nxbbs\resources\sass\show.scss */"./resources/sass/show.scss");
-__webpack_require__(/*! D:\WWW\nxbbs\resources\sass\follow.scss */"./resources/sass/follow.scss");
-module.exports = __webpack_require__(/*! D:\WWW\nxbbs\resources\sass\userinfo.scss */"./resources/sass/userinfo.scss");
+__webpack_require__(/*! D:\www\nxbbs\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\www\nxbbs\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\www\nxbbs\resources\sass\login.scss */"./resources/sass/login.scss");
+__webpack_require__(/*! D:\www\nxbbs\resources\sass\show.scss */"./resources/sass/show.scss");
+__webpack_require__(/*! D:\www\nxbbs\resources\sass\follow.scss */"./resources/sass/follow.scss");
+__webpack_require__(/*! D:\www\nxbbs\resources\sass\userinfo.scss */"./resources/sass/userinfo.scss");
+module.exports = __webpack_require__(/*! D:\www\nxbbs\resources\sass\notice.scss */"./resources/sass/notice.scss");
 
 
 /***/ })

@@ -22,8 +22,10 @@
         @endif
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="type_id" value="1">
 
         @include('shared._error')
+
         <div class="card askquestion_section">
           <div class="form-group row">
             <label for="title" class="col-sm-1 col-form-label">话题标题</label>

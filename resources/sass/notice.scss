@@ -1,0 +1,88 @@
+.notice_index {
+    width: 100%;
+
+    .notice-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .notice_title {
+            padding: 32px 0 0;
+
+            .for_pc {
+                font-size: 26px;
+                font-weight: 400;
+            }
+
+            .content_for_pc {
+                height: 50px;
+                line-height: 28px;
+                .fa-angle-left{
+                    font-size: 14px;
+                    color: rgba(0, 0, 0, .5);
+                }
+
+                a {
+                    font-size: 14px;
+                    color: rgba(0, 0, 0, .5);
+                }
+            }
+        }
+
+        .card {
+            .posts_content {
+                .post_list {
+                    margin: 0;
+                    .post_item {
+                        position: relative;
+                        padding-bottom: 4px;
+                        margin-bottom: 16px;
+                        border-bottom: 1px solid #f2f2f2;
+
+                        .post_title {
+                            margin-bottom: 10px;
+                            font-weight: 400;
+                            display: block;
+                            font-size: 16px;
+                            line-height: 36px;
+
+                            a {
+                                color: rgba(0, 0, 0, .9);
+                            }
+                        }
+
+                        .post_info {
+                            color: rgba(0, 0, 0, .3);
+                            font-size: 14px;
+                            margin: 12px 0;
+
+                            .post_info_meta {
+                                display: inline-block;
+                                vertical-align: top;
+                                padding-right: 15px;
+                                font-weight: 400;
+                                font-style: normal;
+                            }
+
+                            .post_info_extend {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+
+                .pagination_wrp{
+                    padding-bottom: 0;
+                    text-align: right;
+                    margin-top: 20px;
+                    .pagination{
+                        .page_nav_area{
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

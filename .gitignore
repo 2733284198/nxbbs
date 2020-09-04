@@ -1,5 +1,6 @@
 /node_modules
 /public/hot
+/public/phpMyAdmin4.8.5
 /public/uploads
 /public/storage
 /storage/*.key

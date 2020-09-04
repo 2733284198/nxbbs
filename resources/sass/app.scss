@@ -85,7 +85,7 @@ ul {
     .nav-link {
       line-height: 64px;
       font-size: 16px;
-      border-bottom: 1px solid #000;
+      // border-bottom: 1px solid #000;
     }
   }
 
@@ -222,7 +222,9 @@ ul {
 // 分类头部
 .nxbbs_category_head {
   position: relative;
-  padding: 21px 137px 20px 31px;
+  padding: 21px 31px 20px 31px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #f2f2f2;
 
   .category_icon {
     float: left;
@@ -246,6 +248,19 @@ ul {
     font-weight: 500;
     vertical-align: text-bottom;
     margin-left: 20px;
+  }
+}
+
+// 分类公告
+.nxbbs_notice {
+  position: relative;
+  padding: 7px 31px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+
+  a {
+    position: relative;
+    right: -640px;
   }
 }
 
@@ -351,6 +366,8 @@ body {
 
 /* Topic Index Page */
 .topics-index-page,
+.articles-index-page,
+.attention-index-page,
 .categories-show-page,
 .root-page {
   .topic-list {
@@ -473,7 +490,7 @@ body {
       margin-top: 12px;
       margin-bottom: 12px;
       border: 0;
-      border-top: 1px solid rgba(0,0,0,.1);
+      border-top: 1px solid rgba(0, 0, 0, .1);
     }
   }
 }

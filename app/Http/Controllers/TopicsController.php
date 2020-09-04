@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
 use Auth;
 use App\Handlers\ImageUploadHandler;
+use App\Models\Type;
 
 class TopicsController extends Controller
 {
@@ -25,7 +26,30 @@ class TopicsController extends Controller
                         ->paginate(20);
         $active_users = $user->getActiveUsers();
         $categorys = category::all();
-        return view('topics.index', compact('topics','categorys', 'active_users'));
+        $tops = $topic->where('top', 1)->orderBy('updated_at', 'desc')->get();
+        return view('topics.index', compact('topics','categorys', 'active_users','tops'));
+    }
+
+    public function articlesIndex(Request $request, Topic $topic, User $user)
+    {
+        $topics = $topic->where('type_id', 3)->orderBy('created_at', 'desc')->paginate(20);
+        $active_users = $user->getActiveUsers();
+        $categorys = category::all();
+        $tops = $topic->where('top', 1)->orderBy('updated_at', 'desc')->get();
+        return view('topics.index', compact('topics','categorys', 'active_users','tops'));
+    }
+
+    public function attentionIndex(Request $request, Topic $topic, User $user)
+    {
+        $topics=[];
+        if (Auth::check()) {
+            $topics = Auth::user()->feed()
+            ->paginate(20);
+        }
+        $active_users = $user->getActiveUsers();
+        $categorys = category::all();
+        $tops = null;
+        return view('topics.index', compact('topics','categorys', 'active_users','tops'));
     }
 
     public function show(Request $request, Topic $topic)
@@ -35,13 +59,17 @@ class TopicsController extends Controller
             return redirect($topic->link(), 301);
         }
 
-        return view('topics.show', compact('topic'));
+        $comments = $topic->replies()->where('replies_id', 0)->with('user')->get();
+        $replies = $topic->replies()->where('replies_id','!=', 0)->with('user')->get();
+
+        return view('topics.show', compact('topic','comments','replies'));
     }
 
     public function create(Topic $topic)
     {
+        $types=Type::all();
         $categories = Category::all();
-        return view('topics.create_and_edit', compact('topic', 'categories'));
+        return view('topics.create_and_edit', compact('topic', 'categories','types'));
     }
 
     public function store(TopicRequest $request, Topic $topic)

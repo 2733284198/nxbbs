@@ -10982,7 +10982,6 @@ ul {
 .navbar-static-top .header_navs .nav-link {
   line-height: 64px;
   font-size: 16px;
-  border-bottom: 1px solid #000;
 }
 
 .navbar-static-top .header_ctrls_meta {
@@ -11111,7 +11110,9 @@ ul {
 
 .nxbbs_category_head {
   position: relative;
-  padding: 21px 137px 20px 31px;
+  padding: 21px 31px 20px 31px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .nxbbs_category_head .category_icon {
@@ -11136,6 +11137,18 @@ ul {
   font-weight: 500;
   vertical-align: text-bottom;
   margin-left: 20px;
+}
+
+.nxbbs_notice {
+  position: relative;
+  padding: 7px 31px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+}
+
+.nxbbs_notice a {
+  position: relative;
+  right: -640px;
 }
 
 .simple_card_header {
@@ -11232,6 +11245,8 @@ body {
 /* Topic Index Page */
 
 .topics-index-page .topic-list .simple_container_body,
+.articles-index-page .topic-list .simple_container_body,
+.attention-index-page .topic-list .simple_container_body,
 .categories-show-page .topic-list .simple_container_body,
 .root-page .topic-list .simple_container_body {
   background-color: #fff;
@@ -11241,6 +11256,8 @@ body {
 }
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item,
 .root-page .topic-list .simple_container_body .post_list .post_item {
   position: relative;
@@ -11248,6 +11265,8 @@ body {
 }
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_title,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_title,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_title,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_title,
 .root-page .topic-list .simple_container_body .post_list .post_item .post_title {
   font-weight: 400;
@@ -11257,6 +11276,8 @@ body {
 }
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_title a,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_title a,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_title a,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_title a,
 .root-page .topic-list .simple_container_body .post_list .post_item .post_title a {
   color: rgba(0, 0, 0, 0.9);
@@ -11265,6 +11286,8 @@ body {
 }
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_author_avatar,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_author_avatar,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_author_avatar,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_author_avatar,
 .root-page .topic-list .simple_container_body .post_list .post_item .post_author_avatar {
   display: inline-block;
@@ -11275,12 +11298,16 @@ body {
 }
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_author_nickname,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_author_nickname,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_author_nickname,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_author_nickname,
 .root-page .topic-list .simple_container_body .post_list .post_item .post_author_nickname {
   color: #576b95;
 }
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_group,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_group,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_group,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_group,
 .root-page .topic-list .simple_container_body .post_list .post_item .post_group {
   display: inline-block;
@@ -11291,6 +11318,8 @@ body {
 }
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_time,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_time,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_time,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_time,
 .root-page .topic-list .simple_container_body .post_list .post_item .post_time {
   margin-left: 14px;
@@ -11305,6 +11334,8 @@ body {
 }
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_desc,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_desc,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_desc,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_desc,
 .root-page .topic-list .simple_container_body .post_list .post_item .post_desc {
   color: rgba(0, 0, 0, 0.5);
@@ -11318,12 +11349,16 @@ body {
 }
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_info_extend,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_info_extend,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_info_extend,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_info_extend,
 .root-page .topic-list .simple_container_body .post_list .post_item .post_info_extend {
   float: right;
 }
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_info_meta,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_info_meta,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_info_meta,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_info_meta,
 .root-page .topic-list .simple_container_body .post_list .post_item .post_info_meta {
   display: inline-block;
@@ -11337,6 +11372,10 @@ body {
 
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_info_meta .far,
 .topics-index-page .topic-list .simple_container_body .post_list .post_item .post_info_meta .fas,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_info_meta .far,
+.articles-index-page .topic-list .simple_container_body .post_list .post_item .post_info_meta .fas,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_info_meta .far,
+.attention-index-page .topic-list .simple_container_body .post_list .post_item .post_info_meta .fas,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_info_meta .far,
 .categories-show-page .topic-list .simple_container_body .post_list .post_item .post_info_meta .fas,
 .root-page .topic-list .simple_container_body .post_list .post_item .post_info_meta .far,
@@ -11346,6 +11385,8 @@ body {
 }
 
 .topics-index-page .topic-list .nav > li > a,
+.articles-index-page .topic-list .nav > li > a,
+.attention-index-page .topic-list .nav > li > a,
 .categories-show-page .topic-list .nav > li > a,
 .root-page .topic-list .nav > li > a {
   position: relative;
@@ -11355,12 +11396,16 @@ body {
 }
 
 .topics-index-page .topic-list a,
+.articles-index-page .topic-list a,
+.attention-index-page .topic-list a,
 .categories-show-page .topic-list a,
 .root-page .topic-list a {
   color: #444444;
 }
 
 .topics-index-page .topic-list .meta,
+.articles-index-page .topic-list .meta,
+.attention-index-page .topic-list .meta,
 .categories-show-page .topic-list .meta,
 .root-page .topic-list .meta {
   font-size: 0.9em;
@@ -11368,18 +11413,24 @@ body {
 }
 
 .topics-index-page .topic-list .meta a,
+.articles-index-page .topic-list .meta a,
+.attention-index-page .topic-list .meta a,
 .categories-show-page .topic-list .meta a,
 .root-page .topic-list .meta a {
   color: #b3b3b3;
 }
 
 .topics-index-page .topic-list .badge,
+.articles-index-page .topic-list .badge,
+.attention-index-page .topic-list .badge,
 .categories-show-page .topic-list .badge,
 .root-page .topic-list .badge {
   background-color: #d8d8d8;
 }
 
 .topics-index-page .topic-list hr,
+.articles-index-page .topic-list hr,
+.attention-index-page .topic-list hr,
 .categories-show-page .topic-list hr,
 .root-page .topic-list hr {
   margin-top: 12px;

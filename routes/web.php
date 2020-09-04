@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'TopicsController@index')->name('root');
+Route::get('/attention','TopicsController@attentionIndex')->name('attention.index');
 
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -45,6 +46,7 @@ Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
 
 Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
+Route::post('/comments', 'RepliesController@comments')->name('comments.store');
 
 Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
 
@@ -57,3 +59,16 @@ Route::delete('/users/followers/{user}', 'FollowersController@destroy')->name('f
 // 粉丝页面
 Route::get('/users/{user}/followings', 'UsersController@followings')->name('users.followings');
 Route::get('/users/{user}/followers', 'UsersController@followers')->name('users.followers');
+
+// 后台页面
+Route::get('/admin','Admin\AdminUsersController@login')->name('admin.index');
+
+// 公告路由
+Route::get('notices','NoticesController@index')->name('notices.index');
+Route::get('notices/{notices}','NoticesController@show')->name('notices.show');
+
+// 文章路由
+Route::get('articles','TopicsController@articlesIndex')->name('articles.index');
+
+// 管理员文章置顶
+Route::post('/top/{topic}','Admin\AdminTopicsController@top')->name('topics.top');

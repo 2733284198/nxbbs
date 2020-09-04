@@ -11,11 +11,9 @@
     <ul class="nxbbs_navs">
       @foreach ($categorys as $category_info)
       @if (isset($category) && $category_info->id == $category->id)
-      <li class="nxbbs_nav selected"><a href="{{ route('categories.show', $category_info->id) }}"
-          class="nxbbs_nav_link">{{$category_info->name}}</a></li>
+      <li class="nxbbs_nav selected"><a href="{{ route('categories.show', $category_info->id) }}" class="nxbbs_nav_link">{{$category_info->name}}</a></li>
       @else
-      <li class="nxbbs_nav"><a href="{{ route('categories.show', $category_info->id) }}"
-          class="nxbbs_nav_link">{{$category_info->name}}</a></li>
+      <li class="nxbbs_nav"><a href="{{ route('categories.show', $category_info->id) }}" class="nxbbs_nav_link">{{$category_info->name}}</a></li>
       @endif
 
       @endforeach
@@ -33,20 +31,28 @@
       <div class="category_main"><img class="category_icon category_tag" src="https://res.wx.qq.com/community/dist/community/images/logo_miniprogram_013191.png"><span class="category_title">{{ $category->name }}</span><span class="category_description">{{ $category->description }}</span></div>
     </div>
     @endif
+
+    <div class="nxbbs_notice">
+      <a href="{{ route('notices.index') }}">公告&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    </div>
+
     <div class="card ">
 
       <div class="card-header bg-transparent simple_card_header">
         <ul class="title_tab">
           <li>
-            <a class="{{ active_class( ! if_query('order', 'recent')) }}"
-              href="{{ Request::url() }}?order=default">
+            <a class="{{ active_class( if_query('order', 'default')) }}" href="{{ url('/') }}/?order=default">
               最后回复
             </a>
           </li>
           <li>
-            <a class="{{ active_class(if_query('order', 'recent')) }}"
-              href="{{ Request::url() }}?order=recent">
+            <a class="{{ active_class(if_query('order', 'recent')) }}" href="{{ url('/') }}/?order=recent">
               最新发布
+            </a>
+          </li>
+          <li>
+            <a class="{{ active_class( if_route ('attention.index')) }}" href="{{ route('attention.index') }}">
+              我的关注
             </a>
           </li>
         </ul>
@@ -72,3 +78,9 @@
 </div>
 
 @endsection
+
+@section('script')
+
+  <script type="text/javascript" src="{{ asset('js/create.js') }}"></script> 
+  
+@stop
